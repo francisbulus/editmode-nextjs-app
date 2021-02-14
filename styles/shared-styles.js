@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import media from "./media";
+import media from "./media-queries";
 import { css } from "styled-components";
 import theme from "./theme";
 const { colors, fontSizes, fonts } = theme;
