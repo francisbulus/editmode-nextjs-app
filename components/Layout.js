@@ -13,7 +13,7 @@ const Layout = ({ children, location }) => {
       <GlobalStyle />
       {/* <Head /> */}
       <main>{children}</main>
-      <Navigation location={location} />
+      {/* <Navigation location={location} /> */}
     </ThemeProvider>
   );
 };

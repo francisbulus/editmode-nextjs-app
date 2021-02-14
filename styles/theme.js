@@ -2,6 +2,7 @@ export default {
   preload: [
     "https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap",
     "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap",
+    "https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap",
   ],
   colors: {
     darkNavyStart: "#1C3451",
@@ -20,9 +21,7 @@ export default {
   borderRadius: "3px",
   fonts: {
     FuturaPT:
-      "Futura PT, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
-    FuturaPTLight:
-      "Futura PT Light, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
+      "Hind, Futura PT, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
     Inconsolata: "Roboto Mono, Inconsolata, Monaco, monospace",
     LaBelle: "La Belle Aurore, cursive",
   },

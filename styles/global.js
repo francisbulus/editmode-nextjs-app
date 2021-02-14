@@ -2,13 +2,11 @@ import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
 import media from "./media-queries";
 import reset from "styled-reset";
-import LocalFonts from "./font-imports";
 const { colors, fontSizes, fonts } = theme;
 
 export default createGlobalStyle`
 ${(props) => props.theme.preload.map((url) => '@import url("' + url + '");')}
-  ${reset}
-  ${LocalFonts}
+ ${reset}
   * {
     box-sizing: border-box;
     line-height: 1.5em;
