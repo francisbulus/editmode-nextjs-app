@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import Link from "gatsby-link";
 import styled, { css } from "styled-components";
 import media from "../styles/media-queries";
 import theme from "../styles/theme";
@@ -90,9 +89,8 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled(Link).attrs({
-  activeClassName: "active",
-})`
+export const NavLink = styled.a`
+  color: #fff;
   &.active {
     color: #fff;
 

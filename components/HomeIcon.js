@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "../svgs/home.svg";
 import styled from "styled-components";
 import Link from "next/link";
-import media from "../styles/media";
+import media from "../styles/media-queries";
 
 export const Wrapper = styled.div`
   display: none;

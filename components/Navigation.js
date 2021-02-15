@@ -86,8 +86,8 @@ class Navigation extends Component {
 
   componentDidUpdate(prev) {
     const { location } = this.props;
-
-    if (location.pathname !== prev.location.pathname) {
+    console.log(location);
+    if (location && location.pathname !== prev.location.pathname) {
       this.setState({ open: false });
     }
   }
