@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { mixins } from "../styles/shared-styles";
 import CustomSection from "./CustomSection";
-import media from "../styles/media";
+import media from "../styles/media-queries";
 import theme from "../styles/theme";
 import { generateSpace } from "../styles/shared-styles";
 
@@ -69,11 +69,23 @@ const StyledDescription = styled.div`
 
 export default function Hero() {
   return (
-    <Editmode projectId="prj_TnN3cMjGrc4u">
-      <div className="flex items-center">
-        <Chunk identifier="cnk_cb6ab5d4a6ade8c6fb95" />
-        <div className="text-xl font-bold">{name}</div>
-      </div>
-    </Editmode>
+    <>
+      <Editmode projectId="prj_TnN3cMjGrc4u">
+        <Container>
+          <StyledIntro>
+            <Chunk identifier="cnk_1fa0e002ae2fb278c83f" />
+          </StyledIntro>
+          <StyledTitle>
+            <Chunk identifier="cnk_e00c86ee69a9ed3cbf51" />
+          </StyledTitle>
+          <StyledDescription>
+            <Chunk identifier="cnk_cb6ab5d4a6ade8c6fb95" />
+          </StyledDescription>
+          <StyledCTAButton href={`mailto:notchera@gmail.com`}>
+            GET IN TOUCH
+          </StyledCTAButton>
+        </Container>
+      </Editmode>
+    </>
   );
 }
