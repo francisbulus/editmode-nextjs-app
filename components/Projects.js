@@ -7,6 +7,7 @@ import Live from "../svgs/live.js";
 import Github from "../svgs/github.svg";
 import useMediaQuery from "../hooks/use-mq";
 import useMeasure from "../hooks/use-measure";
+import { Editmode, ChunkCollection, ChunkFieldValue } from "editmode-react";
 
 const StyledContainer = styled.section`
   max-width: 900px;
