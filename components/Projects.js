@@ -7,7 +7,7 @@ import Live from "../svgs/live.js";
 import Github from "../svgs/github.svg";
 import useMediaQuery from "../hooks/use-mq";
 import useMeasure from "../hooks/use-measure";
-import Image from "next/image";
+
 
 const StyledContainer = styled.section`
   max-width: 900px;
@@ -59,7 +59,6 @@ const StyledFeaturedImg = styled.img`
   height: 100%;
   filter: grayscale(100%) contrast(1) brightness(80%);
 
-  //   position: absolute;
   //   top: 0px;
   //   left: 0px;
   //   width: 100%;
@@ -182,7 +181,7 @@ const StyledDescription = styled.div`
   padding: 25px;
   background-color: ${theme.colors.darkNavyEnd};
   color: white;
-  font-size: ${theme.fontSizes.md};
+  font-size: ${theme.fontSizes.sm};
   border-radius: ${theme.borderRadius};
   background-color: transparent;
   padding: 20px 0;
