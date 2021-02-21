@@ -1,6 +1,5 @@
 import React from "react";
 import Tally from "../svgs/logo.svg";
-import LastPlayed from "./LastPlayed";
 // import theme from "../styles/theme"
 
 const Logo = () => (
@@ -11,7 +10,6 @@ const Logo = () => (
       height={52}
       style={{ position: "absolute", top: "25", backgroundSize: "20px 30px" }}
     />{" "}
-    <LastPlayed />
   </header>
 );
 

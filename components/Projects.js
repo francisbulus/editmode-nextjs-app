@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
-import media from "../styles/media";
+import media from "../styles/media-queries";
 import theme from "../styles/theme";
 import Live from "../svgs/live.js";
 import Github from "../svgs/github.svg";
 import useMediaQuery from "../hooks/use-mq";
 import useMeasure from "../hooks/use-measure";
-import { Editmode, ChunkCollection, ChunkFieldValue } from "editmode-react";
+import Image from "next/image";
 
 const StyledContainer = styled.section`
   max-width: 900px;
@@ -51,7 +51,6 @@ const StyledProjectName = styled.h5`
 const StyledFeaturedImg = styled.img`
   max-width: 100%;
   vertical-align: middle;
-
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
@@ -59,6 +58,14 @@ const StyledFeaturedImg = styled.img`
   width: auto;
   height: 100%;
   filter: grayscale(100%) contrast(1) brightness(80%);
+
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: 0;
+  //   object-position: center;
 `;
 
 const StyledImgContainer = styled.a`
@@ -179,6 +186,7 @@ const StyledDescription = styled.div`
   border-radius: ${theme.borderRadius};
   background-color: transparent;
   padding: 20px 0;
+  font-family: ${theme.fonts.FuturaPT};
   box-shadow: none;
   &:hover {
     box-shadow: none;
@@ -227,7 +235,8 @@ const Links = ({ github, live }) => {
 
 const Projects = ({ projects }) => {
   console.log(projects);
-
+  const sorted = projects.sort((a, b) => (a.date > b.date ? -1 : 1));
+  console.log("Fdfdfd", sorted);
   const [bind, { width }] = useMeasure();
   const columnCount = useMediaQuery(
     ["(max-width: 700px)", "(max-width: 1023px)"],
@@ -237,7 +246,7 @@ const Projects = ({ projects }) => {
 
   const heights = new Array(columnCount).fill(0);
 
-  const display = projects.map((item) => {
+  const display = sorted.map((item) => {
     const { height } = item;
     console.log(height);
     const column = heights.indexOf(Math.min(...heights));
@@ -267,7 +276,7 @@ const Projects = ({ projects }) => {
               {display.map((item, key) => {
                 const {
                   title,
-                  html,
+                  description,
                   xy,
                   height,
                   image,
@@ -307,9 +316,9 @@ const Projects = ({ projects }) => {
                       <StyledContent>
                         <StyledLabel>Featured</StyledLabel>
                         <StyledProjectName>{title}</StyledProjectName>
-                        <StyledDescription
-                          dangerouslySetInnerHTML={{ __html: html }}
-                        />
+                        <StyledDescription>
+                          <p>{description}</p>
+                        </StyledDescription>
                         {tech && (
                           <StyledTechList>
                             {tech.map((tech, i) => (
@@ -325,7 +334,7 @@ const Projects = ({ projects }) => {
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                       >
-                        <StyledFeaturedImg fluid={image} />
+                        <StyledFeaturedImg src={`${image}`} />
                       </StyledImgContainer>
                     </StyledProject>
                   </Item>
