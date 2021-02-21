@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import media from "../styles/media-queries";
 import theme from "../styles/theme";
 import { generateSpace } from "../styles/shared-styles";
+import Link from "./Link";
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -88,9 +89,7 @@ export const NavItem = styled.li`
           `}
   }
 `;
-
 export const NavLink = styled.a`
-  color: #fff;
   &.active {
     color: #fff;
 
@@ -149,17 +148,17 @@ const Menu = ({ open }) => (
     </Nav>
     <Nav>
       <NavItem open={open}>
-        <NavLink open={open} to="/" activeClassName="current-page">
+        <NavLink open={open} href="/" activeClassName="current-page">
           HOME
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="/work" activeClassName="current-page">
+        <NavLink href="/work" activeClassName="current-page">
           WORK
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="/profile" activeClassName="current-page">
+        <NavLink href="/profile" activeClassName="current-page">
           PROFILE
         </NavLink>
       </NavItem>

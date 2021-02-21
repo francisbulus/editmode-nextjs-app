@@ -43,11 +43,6 @@ const Sider = styled.a`
     padding: .5rem 0 0;
     text-align: center;
     font-size: .8rem;
-    // color:white;
-
-    // &:nth-of-type(1) {
-    //   color: ${theme.colors.darkYellow}
-    // }
   `}
 `;
 

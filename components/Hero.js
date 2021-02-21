@@ -56,6 +56,7 @@ const StyledDescription = styled.div`
   font-family: ${theme.fonts.FuturaPT};
   font-weight: normal;
   color: #adbbca;
+  font-size: 18px;
   ${media.mobile`${theme.fontSizes.sm}`};
   del {
     text-decoration: line-through;
