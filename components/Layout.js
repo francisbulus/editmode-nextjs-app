@@ -6,14 +6,11 @@ import { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import Navigation from "../components/Navigation";
 import Home from "./HomeIcon";
-// import Head from "./Head";
-// import "../styles/main.scss";
 
 const Layout = ({ children, location }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {/* <Head /> */}
       <main>{children}</main>
       <Navigation location={location} />
     </ThemeProvider>
